@@ -1,4 +1,6 @@
 import os
+from os import system, name
+from time import sleep
 
 def isiSerial():   
     myfile = open("bank_serial.txt", "r")
@@ -74,6 +76,16 @@ def copyEbook():
     
         os.system('cp -R %s %s' % (src, dst))
 
+
+def clear():
+    if name == 'int':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
+
+
+clear()
 awal = 0
 akhir = int(input('input jumlah GSC = '))
 for x in range(awal,akhir):
